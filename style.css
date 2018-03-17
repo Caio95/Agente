@@ -1,0 +1,36 @@
+
+.navbar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 25px !important;
+}
+
+.nav a {
+	color: #ffffff !important;
+    font-weight: bold;
+   font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+.nav a:visited{
+		background-color: #14C3A2 !important;
+	color: #FFFFFF  !important;
+}
+
+.nav a:hover {
+	background-color: #FFFFFF !important;
+	color: #14C3A2 !important;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-header .navbar-toggle i{
+	color: #ffffff !important;
+}
+
+.dropdown-menu a{
+	color: #000000 !important;
+}
+
+.badge{
+	background-color: #FF4500 !important;
+}

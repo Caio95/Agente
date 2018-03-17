@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="agente">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+	<script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<title>Agente | Cadastre-se gratis</title>
+
+</head>
+<body ng-controller="homeController">
+	 <header>
+		<nav class="navbar" style="background-color: #14C3A2;">
+			  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<i class="glyphicon glyphicon-th"></i>
+				      </button>
+				      <a class="navbar-brand" href="#/">Agente</a>
+				    </div>
+
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <form class="navbar-form navbar-left">
+					    <div class="input-group">
+					      <input type="text" class="form-control" placeholder="Pesquisar por...">
+					      <span class="input-group-btn">
+					        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+					      </span>
+					    </div>
+				      </form>
+				      <ul class="nav navbar-nav navbar-right">
+				        <li><a href="#/"><i class="glyphicon glyphicon-home"></i> Início</a></li>
+				        <li><a href="#/amigos"><i class="glyphicon glyphicon-user"></i> Meus Amigos</a></li>
+				        <li><a href="#/notificacoes"><i class="glyphicon glyphicon-bell"></i> Notificações <span class="badge">42</span></a></li>
+				         <li><a href="#/mensagens"><i class="glyphicon glyphicon-comment"></i> Mensagens <span class="badge">4</span></a></li>
+				        <li class="dropdown">
+				          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-cog"></i><span class="caret"></span></a>
+				          <ul class="dropdown-menu">
+				            <li><a href="#/config"><i class="glyphicon glyphicon-wrench"></i> Configuração</a></li>
+				            <li><a href="#/atividades"><i class="glyphicon glyphicon-list-alt"></i> Atividades</a></li>
+				            <li role="separator" class="divider"></li>
+				            <li><a href="#/sair"><i class="glyphicon glyphicon-log-out"></i> Sair</a></li>
+				          </ul>
+				        </li>
+				      </ul>
+				    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+		</nav>
+	 </header>
+
+</body>
+</html>
