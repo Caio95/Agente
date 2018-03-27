@@ -1,7 +1,16 @@
 <?php
-require_once('Database.php');
+
+namespace API\Database\Models;
+
+use API\Database\Database;
 
 Class Usuario {
+
+    public static function test($id) {
+        header('Content-type: application/json');
+        return json_encode(array('id' => $id));
+    }
+
     public static function add($nome, $idade, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $login, $senha){
         $pdo = Database::connection();
         $sql = 'INSERT INTO usuario(nome, idade, sexo, nascimento, tipo, esporte, cidade, estado, login, senha) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';

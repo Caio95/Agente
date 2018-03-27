@@ -1,5 +1,7 @@
 <?php
-require_once('Database.php');
+namespace API\Database\Models;
+
+use API\Database\Database;
 
 Class Publicacao {
     public static function add($descricao, $imagem, $video,  $userId){

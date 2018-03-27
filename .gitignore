@@ -3,3 +3,7 @@ node_modules
 
 # Arquivos .vscode
 .vscode
+
+# Pasta vendor e composer
+composer.phar
+/vendor/
