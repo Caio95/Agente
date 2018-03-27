@@ -34,7 +34,7 @@ angular.module('agente', ['ngRoute','ngStorage'])
 			// aviso de campos em branco 
 		}
 		else{
-			$http.post('http://localhost/agente/api/' + 'usuario/validade.php', {
+			$http.post('http://localhost/agente/api/' + 'usuario/validate.php', {
 				'login' : $scope.login,
 				'senha' : $scope.senha
 			}).then(function(result){
