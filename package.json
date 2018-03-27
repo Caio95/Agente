@@ -12,11 +12,16 @@
   "author": "Caio_henrique",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.0",
-    "angular-resource": "^1.5.1",
-    "angular-route": "^1.5.1",
+    "angular": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-material": "^1.1.7",
     "bootstrap": "^3.3.7",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "ngstorage": "^0.3.10"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0"
