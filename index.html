@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="icon" type="image/jpg" href="img/favicon.png" title="Agente"/>
-	<script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
+	<link rel="icon" type="image/jpg" href="img/favicon.png" title="Agente"/>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 	<script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
@@ -178,13 +178,29 @@
 							</div>
 							<div class="form-check">
 								<label class="form-check-label">
-									<input type="checkbox" class="form-check-input" ng-model="confirmacao">
+									<input type="checkbox" class="form-check-input" ng-model="confirmacao" ng-true-value="'S'" ng-false-value="'N'">
 									Ao clicar em registrar, você concorda com nossa política e nossos termos
 								</label>
 							  </div>
+							  <div class="alert alert-danger collapse" id="senha">
+								 <a id="closeSenha" href="#" class="close">&times;</a>
+								 <strong>Erro!</strong> Senhas informadas não conferem!
+							  </div>
+							  <div class="alert alert-warning collapse" id="termo">
+								 <a id="closeTermo" href="#" class="close">&times;</a>
+								 <strong>Aviso!</strong> Para cadastrar é necessário concordar com os termos de uso!
+							  </div>
+							  <div class="alert alert-danger collapse" id="emailErr">
+								<a id="closeEmail" href="#" class="close">&times;</a>
+								<strong>Erro!</strong> E-mail inválido!
+							</div>
+							<div class="alert alert-danger collapse" id="campo">
+								<a id="closeCampo" href="#" class="close">&times;</a>
+								<strong>Erro!</strong> Preencha todos os campos!
+							</div>
  							<div>
-                                <input type="submit" class="btn btn-lg" value="Registrar" style="background-color:#009900; color:#FFFFFF" ng-click="cadastrar()">
- 							</div>
+                                <input type="submit" id="cadastrar" class="btn btn-lg" value="Registrar" style="background-color:#009900; color:#FFFFFF" ng-click="cadastrar()">
+							 </div>
 						</fieldset>
 					</form>
 				</div>
@@ -199,13 +215,21 @@
 						<fieldset>							
 							<p class="text-uppercase" style="color:#009900;" > entrar utilizando sua conta: </p>	
 							<div class="form-group">
-								<input type="email" name="username" id="username" class="form-control input-lg" placeholder="Usuário">
+								<input type="email" name="username" ng-model="email2" id="username" class="form-control input-lg" placeholder="Usuário">
 							</div>
 							<div class="form-group">
-								<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Senha">
+								<input type="password" name="password" ng-model="senha3" id="password" class="form-control input-lg" placeholder="Senha">
+							</div>
+							<div class="alert alert-danger collapse" id="log">
+								<a id="closeLog" href="#" class="close">&times;</a>
+								<strong>Erro!</strong> Preencha todos os campos!
+							</div>
+							<div class="alert alert-danger collapse" id="senhaErr">
+								<a id="closeSenhaErr" href="#" class="close">&times;</a>
+								<strong>Erro!</strong> Credenciais incorretas!
 							</div>
 							<div>
-								<input type="submit" class="btn btn-lg" value="Entrar" style="background-color:#009900; color:#FFFFFF">
+								<input type="submit" class="btn btn-lg" value="Entrar" style="background-color:#009900; color:#FFFFFF" ng-click="login()">
 							</div>
 							<div>
 								<small><a href="#/">Esqueceu sua senha?</a></small>

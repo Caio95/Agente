@@ -46,7 +46,7 @@ Class Usuario {
         $pdo = Database::connection();
         $sql = 'SELECT * FROM usuario WHERE login = ? AND senha = ?';
         $query = $pdo->prepare($sql);
-        $query->execute(array($login, $senha));
+        $query->execute(array($usuario, $senha));
         $usuario = $query->fetch(PDO::FETCH_ASSOC);
         return $usuario;
     }
