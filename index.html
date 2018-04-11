@@ -1,247 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="agente">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
-	<link rel="icon" type="image/jpg" href="img/favicon.png" title="Agente"/>
-	<script src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-	<script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-route/angular-route.min.js"></script>
-	<script src="node_modules/ngstorage/ngStorage.min.js"></script>
-	<script src="node_modules/angular-resource/angular-resource.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-    <script src="app.js"></script>
-	<title ng-bind="pageTitle"></title>
-</head>
-<body ng-controller="loginController">
-    <div class="container-fluid">
-		<div class="container">
-			 <a href="http://www.agente.esp.br/index.php"><img src="img/logo_agente.png" alt="agente" title="Agente" class="img-responsive"></a>
- 			<hr>
-			<div class="row">
-				<div class="col-md-5">
- 					<form role="form">
-						<fieldset>							
-							<p class="text-uppercase pull-center" style="color:#009900;"> Cadastre-se</p>	
- 							<div class="form-group">
-								<input type="text" name="nome" ng-model="nome" class="form-control input-lg" placeholder="Nome" title="Nome completo">
-							</div>
-							<div class="form-group">
-								<select name="esporte" ng-model="esporte" class="form-control input-lg" title="Esporte que pratica">
-									<option value="" selected="selected">Selecione seu esporte</option>
-									<option value="1" >Aeromodelismo</option>
-									<option value="2" >Airsoft</option>
-									<option value="3" >Atletismo</option>
-									<option value="4" >Automobilismo</option>
-									<option value="5" >Badminton</option>
-									<option value="6" >Basquete</option>
-									<option value="7" >Basquete em cadeira de rodas</option>
-									<option value="8" >Beach Tennis</option>
-									<option value="9" >Bike Trial</option>
-									<option value="10" >BMX (Bicicross)</option>
-									<option value="11" >Bocha</option>
-									<option value="12" >Bodybuikding</option>
-									<option value="13" >Boliche</option>
-									<option value="14" >Boxe</option>
-									<option value="15" >Calistenia</option>
-									<option value="16" >Canoagem</option>
-									<option value="17" >Capoeira</option>
-									<option value="18" >Ciclismo</option>
-									<option value="19" >Corfebol</option>
-									<option value="20" >Corrida</option>
-									<option value="21" >Corrida de Aventura</option>
-									<option value="22" >Corrida de Montanha</option>
-									<option value="23" >Corrida de Orientação</option>
-									<option value="24" >Corrida em cadeira de rodas</option>
-									<option value="25" >Curling</option>
-									<option value="26" >Dança</option>
-									<option value="27" >Downhill</option>
-									<option value="28" >Duathlon</option>
-									<option value="29" >Escalada</option>
-									<option value="30" >Esgrima</option>
-									<option value="31" >Fisiculturismo</option>
-									<option value="32" >Frescobol</option>
-									<option value="33" >Futebol</option>
-									<option value="34" >Futebol Americano</option>
-									<option value="35" >Futebol de 7</option>
-									<option value="36" >Futebol de areia</option>
-									<option value="37" >Futevôlei</option>
-									<option value="38" >Futsal</option>
-									<option value="39" >Ginástica de Artística</option>
-									<option value="40" >Ginástica de Rodas</option>
-									<option value="41" >Ginástica Rítmica</option>
-									<option value="42" >Golfe</option>
-									<option value="43" >Halterofilismo</option>
-									<option value="44" >Handebol</option>
-									<option value="45" >Handebol de Areia</option>
-									<option value="46" >Hapkido</option>
-									<option value="47" >Hipismo</option>
-									<option value="48" >Hipismo adaptado</option>
-									<option value="49" >Hockey in line</option>
-									<option value="50" >Hóquei sobre grama</option>
-									<option value="51" >Iatismo</option>
-									<option value="52" >Jiu-jitsu</option>
-									<option value="53" >Jogo de demas</option>
-									<option value="54" >Judô</option>
-									<option value="55" >Karatê</option>
-									<option value="56" >Kartismo</option>
-									<option value="57" >Kickboxing</option>
-									<option value="58" >Kung Fu</option>
-									<option value="59" >Levantamento de peso Olímpico</option>
-									<option value="60" >Luta de braço</option>
-									<option value="61" >Luta Livre</option>
-									<option value="62" >Luta Olímpica</option>
-									<option value="63" >Maratona</option>
-									<option value="64" >Maratonas Aquáticas</option>
-									<option value="65" >MMA</option>
-									<option value="66" >Motocross</option>
-									<option value="67" >Mountain Bike (MTB)</option>
-									<option value="68" >Muay Thai</option>
-									<option value="69" >Nado Sincronizado</option>
-									<option value="70" >Natação</option>
-									<option value="71" >Paintball</option>
-									<option value="72" >Para-Badminton</option>
-									<option value="73" >Paraciclimos</option>
-									<option value="74" >Parapente</option>
-									<option value="75" >Paraquedismo</option>
-									<option value="76" >Paratletismo</option>
-									<option value="77" >Patinação</option>
-									<option value="78" >Pesca esportiva</option>
-									<option value="79" >Pole Sports</option>
-									<option value="80" >Powerlifting</option>
-									<option value="81" >Remo</option>
-									<option value="82" >Rugby</option>
-									<option value="83" >Skate</option>
-									<option value="84" >Slackline</option>
-									<option value="85" >Slalom Freestyle</option>
-									<option value="86" >Snooker</option>
-									<option value="87" >Snowboard</option>
-									<option value="88" >Softbol</option>
-									<option value="89" >Squash</option>
-									<option value="90" >Street Workout</option>
-									<option value="91" >SUP Race</option>
-									<option value="92" >Surf</option>
-									<option value="93" >Taekwondo</option>
-									<option value="94" >Tênis</option>
-									<option value="95" >Tênis (Cadeira de Rodas)</option>
-									<option value="96" >Tênis de Mesa</option>
-									<option value="97" >Tênis de Mesa Adaptado</option>
-									<option value="98" >Tiro com Arco</option>
-									<option value="99" >Tiro Esportivo</option>
-									<option value="100" >Tiro Esportivo Paralímpico</option>
-									<option value="101" >Triathlon</option>
-									<option value="102" >Ultimate Firefighter</option>
-									<option value="103" >Ultramaratonista</option>
-									<option value="104" >Vela</option>
-									<option value="105" >Voleibol</option>
-									<option value="106" >Vôlei de Praia</option>
-									<option value="107" >Vôlei sentado</option>
-									<option value="108" >Voo Livre</option>
-									<option value="109" >Wakeboard</option>
-									<option value="110" >Xadrez</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<select name="tipo" ng-model="tipo" class="form-control input-lg" title="Categoria">
-									<option value="">Informe a categoria</option>
-									<option value="Profissional">Profissional</option>
-									<option value="Amador">Amador</option>
-									<option value="Amador">Técnico</option>
-									<option value="Amador">Outros</option>
-									
-								</select>
-							</div>
-							<div class="form-group">
-								<h3 for="DataNascimento">Data de Nascimento</h3>
-								<input type="date" name="nascimento" ng-model="nascimento" class="form-control input-lg" title="Data de Nascimento">
-							</div>
-							<div class="form-group">
-								<label class="radio-inline">
-									<input type="radio" ng-model="sexo" name="inlineRadioOptions"  value="M"> <p style="font-size:18px;">Masculino</p>
-								</label>
-								<label class="radio-inline">
-									<input type="radio" ng-model="sexo" name="inlineRadioOptions"  value="F"> <p style="font-size:18px;">Feminino</p>
-								</label>
-							</div>
-							<div class="form-group">
-									<input type="email" name="email" ng-model="email" class="form-control input-lg" placeholder="E-mail" title="E-mail de usuário">
-								</div>
-							<div class="form-group">
-								<input type="password" name="senha" ng-model="senha" class="form-control input-lg" placeholder="Senha" title="Senha">
-							</div>
-								<div class="form-group">
-								<input type="password" name="senha2" ng-model="senha2" class="form-control input-lg" placeholder="Confirmação de senha" title="Confirmação de senha">
-							</div>
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="checkbox" class="form-check-input" ng-model="confirmacao" ng-true-value="'S'" ng-false-value="'N'">
-									Ao clicar em registrar, você concorda com nossa política e nossos termos
-								</label>
-							  </div>
-							  <div class="alert alert-danger collapse" id="senha">
-								 <a id="closeSenha" href="#" class="close">&times;</a>
-								 <strong>Erro!</strong> Senhas informadas não conferem!
-							  </div>
-							  <div class="alert alert-warning collapse" id="termo">
-								 <a id="closeTermo" href="#" class="close">&times;</a>
-								 <strong>Aviso!</strong> Para cadastrar é necessário concordar com os termos de uso!
-							  </div>
-							  <div class="alert alert-danger collapse" id="emailErr">
-								<a id="closeEmail" href="#" class="close">&times;</a>
-								<strong>Erro!</strong> E-mail inválido!
-							</div>
-							<div class="alert alert-danger collapse" id="campo">
-								<a id="closeCampo" href="#" class="close">&times;</a>
-								<strong>Erro!</strong> Preencha todos os campos!
-							</div>
- 							<div>
-                                <input type="submit" id="cadastrar" class="btn btn-lg" value="Registrar" style="background-color:#009900; color:#FFFFFF" ng-click="cadastrar()">
-							 </div>
-						</fieldset>
-					</form>
-				</div>
-				
-				<div class="col-md-2">
-                    <!-------null------>
-                    
-				</div>
-	
-				<div class="col-md-5">
- 				 		<form role="form">
-						<fieldset>							
-							<p class="text-uppercase" style="color:#009900;" > entrar utilizando sua conta: </p>	
-							<div class="form-group">
-								<input type="email" name="username" ng-model="email2" id="username" class="form-control input-lg" placeholder="Usuário">
-							</div>
-							<div class="form-group">
-								<input type="password" name="password" ng-model="senha3" id="password" class="form-control input-lg" placeholder="Senha">
-							</div>
-							<div class="alert alert-danger collapse" id="log">
-								<a id="closeLog" href="#" class="close">&times;</a>
-								<strong>Erro!</strong> Preencha todos os campos!
-							</div>
-							<div class="alert alert-danger collapse" id="senhaErr">
-								<a id="closeSenhaErr" href="#" class="close">&times;</a>
-								<strong>Erro!</strong> Credenciais incorretas!
-							</div>
-							<div>
-								<input type="submit" class="btn btn-lg" value="Entrar" style="background-color:#009900; color:#FFFFFF" ng-click="login()">
-							</div>
-							<div>
-								<small><a href="#/">Esqueceu sua senha?</a></small>
-							</div>
- 						</fieldset>
-				</form>	
-				</div>
-			</div>
-		</div>
-		<p class="text-center">
-			<small id="passwordHelpInline" class="text-muted"> Developer:<a href="mailto:caiohenrique1701@gmail.com"> Caio Henrique de Sousa</a>. Agente ©2018 Todos os direitos reservados</small>
-		</p>
-	</div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/jpg" href="img/favicon.png" title="Agente"/>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+        <script src="node_modules/jquery/dist/jquery.min.js" crossorigin="anonymous"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script src="node_modules/ngstorage/ngStorage.min.js"></script>
+        <script src="node_modules/angular-resource/angular-resource.min.js"></script>
+        <script src="views/login/modelLogin.js"></script>
+        <script src="views/inicio/modelHome.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <title ng-bind="pageTitle"></title>
+    </head>
+<body ng-controller="homeController">
+        <nav class="navbar navbar-fixed-top" style="background-color: #009900;" ng-hide="!usuario">
+                <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <i class="glyphicon glyphicon-th"></i>
+                                </button>
+                                <a class="navbar-brand" href="#/"><img src="img/agente_branco.png" class="img-responsive" id="logo"></a>
+                            </div>
+    
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <form class="navbar-form navbar-left">
+                                    <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Pesquisar por...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                    </div>
+                                </form>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#/"><i class="glyphicon glyphicon-home"></i> Início</a></li>
+                                    <li><a href="#/amigos"><i class="glyphicon glyphicon-user"></i> Meus Amigos</a></li>
+                                    <li><a href="#/notificacoes"><i class="glyphicon glyphicon-bell"></i> Notificações <span class="badge">42</span></a></li>
+                                    <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-cog"></i><span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#/conta"><img src=".." class="img-responsive"> Minha Conta</a></li>
+                                        <li><a href="#/dados">Meus dados</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#/config"><i class="glyphicon glyphicon-wrench"></i> Configuração</a></li>
+                                        <li><a href="#/atividades"><i class="glyphicon glyphicon-list-alt"></i> Atividades</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#" ng-click="sair()"><i class="glyphicon glyphicon-log-out"></i> Sair</a></li>
+                                    </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+    <div ng-view></div>
 </body>
 </html>

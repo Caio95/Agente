@@ -1,0 +1,152 @@
+
+<body ng-controller="homeController">
+
+<!-- <div class="col-md-7" id="publicacao">
+		<div class="panel panel-default">
+				<div class="panel-body">
+						<div class="input-group">
+								<span class="input-group-btn">
+										<button class="btn btn-default" type="file"><i class="glyphicon glyphicon-camera"></i></button>
+								</span>
+								<input type="text" class="form-control" placeholder="Publique seu talento...">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button" id="btnPublicar"><i class="glyphicon glyphicon-ok"></i> Publicar</button>
+								</span>
+						</div>
+				</div>
+		</div>
+	</div> -->
+<br><br>
+<div  id="publicacoes">
+		<div class="container">
+				<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<h2 class="text-center" style="color:#009900;"><i class="glyphicon glyphicon-globe"></i> Publicações</h2>
+					<ul class="timeline">
+					<li>
+						<div class="timeline-badge primary"><a><i class="glyphicon glyphicon-time invert" title="Now" id=""></i></a></div>
+						<div class="timeline-panel">
+							<form action="update.php" method="post" role="form" enctype="multipart/form-data" class="facebook-share-box">
+								<div class="timeline-body">
+									<div class="share-form">
+										<ul class="post-types">
+											<li class="post-type">
+												<a class="status" id="shareType" href="#"><i class="glyphicon glyphicon-star-empty"></i> Status</a>
+											</li>
+											<li class="post-type">
+												<a class="photos" id="shareType" href="#"><i class="glyphicon glyphicon-picture"></i> Foto</a>
+											</li>
+											<li class="post-type">
+												<a class="videos" id="shareType" href="#"><i class="glyphicon glyphicon-film"></i> Vídeo</a>
+											</li>
+										</ul>
+										<div class="share">
+											
+											<div><textarea name="message" cols="40" rows="10" id="status_message" class="form-control message" style="height: 80px; resize: none; overflow: hidden;" placeholder="Publique aqui..."></textarea> </div>
+											<div class="image hide">
+												<input type="file" class="form-control" name="image" id="image">
+											</div>
+											<div class="video hide">
+												<input type="text" class="form-control" placeholder="Youtube or Vimeo video URL" id="videoUrl" name="videoUrl">
+											</div>
+										</div>
+										</div>
+								</div>
+								<div class="timeline-footer clearfix">
+									<div class="pull-right">
+										<input type="submit" name="submit" value="Publicar" id="btn-share" class="btn btn-default" style="background-color:#009900; color:#FFFFFF;">
+									</div>
+								</div>
+							</form>
+						</div>
+					</li>
+					<li  class="timeline-inverted">
+						<div class="timeline-badge primary" ><a title="11 hours ago via Twitter"><i class="glyphicon glyphicon-time invert" id=""></i></a></div>
+						<div class="timeline-panel">
+							<div class="timeline-header">
+									<div class="row">
+											<div class="col-xs-2">
+												<img class="img-responsive img-rounded" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G">
+											</div>
+											<div class="col-xs-8">
+												<a>Azhagupandian </a> shared 6 hours ago
+											</div>
+										</div>
+							</div>
+							<div class="timeline-heading">
+								<div class="videowrapper">
+										<iframe height="300" src="http://www.youtube.com/embed/IuLG6WqjOEo" frameborder="0" allowfullscreen=""></iframe>
+								</div>
+							</div>
+							<div class="timeline-body">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+			
+							</div>
+			
+							<div class="timeline-footer">
+								<div class="media">
+									<a class="pull-left" href="#">
+										<img class="media-object" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G" />
+									</a>
+									<div class="media-body">
+										<p>Looking cool</p>
+										<a href="#">January 19 at 8:15pm</a>
+									</div>
+								</div>
+								<hr>
+								<div class="media">
+									<a class="pull-left" href="#">
+										<img class="media-object" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G" />
+									</a>
+									<div class="media-body">Looking cool </div>
+								</div>
+								<hr>
+								<div class="media">
+									<a class="pull-left" href="#">
+										<img class="media-object" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G" />
+									</a>
+									<div class="media-body">Looking cool </div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="timeline-badge primary" ><a title="11 hours ago via Twitter"><i class="glyphicon glyphicon-time invert" id=""></i></a></div>
+						<div class="timeline-panel">
+							<div class="timeline-header">
+									<div class="row">
+											<div class="col-xs-2">
+												<img class="img-responsive img-rounded" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G">
+											</div>
+											<div class="col-xs-8">
+												<a>Azhagupandian </a> shared 6 hours ago
+											</div>
+										</div>
+							</div>
+							<div class="timeline-heading">
+								<img class="img-responsive" src="img/img-430-135.png" />
+								<div class="timeline-images">
+									<div class="row">
+										<div class="col-xs-4">
+											<img src="img/img-200.png" class="img-thumbnail img-responsive" />
+										</div>
+										<div class="col-xs-4">
+											<img src="img/img1-200.png" class="img-thumbnail img-responsive" />
+										</div>
+										<div class="col-xs-4">
+											<img src="img/img-200.png" class="img-thumbnail img-responsive" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="timeline-body">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>             
+							</div>
+						</div>
+					</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+</div>
+</body>
