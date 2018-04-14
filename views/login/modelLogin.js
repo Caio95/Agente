@@ -18,7 +18,7 @@ angular.module('moduloLogin',[])
                 $('#log').show('in'); 
             }
             else{
-                $http.post('http://localhost/agente/api/'+'usuario/validate.php', {
+                $http.post('http://localhost/agente/api/usuario/validate.php', {
                     'login' : $scope.email2,
                     'senha' : $scope.senha3
                 }).then(function(result){
@@ -51,7 +51,7 @@ angular.module('moduloLogin',[])
                         var nascimento = $scope.nascimento.getUTCFullYear() + '-' +('00' + ($scope.nascimento.getUTCMonth()+1)).slice(-2) + '-' 
                         +('00' + $scope.nascimento.getUTCDate()).slice(-2);
                         if($scope.confirmacao == "S"){
-                            $http.post('http://localhost/agente/api/'+'usuario/save.php',{
+                            $http.post('http://localhost/agente/api/usuario/save.php',{
                                 'nome' : $scope.nome,
                                 'idade' : idade,
                                 'sexo' : $scope.sexo,

@@ -3,6 +3,9 @@ a{
 
 }
 
+.navbar {
+		-webkit-box-shadow: 1px 0.8px 17px #999; 
+}
 .navbar-brand {
     color: #ffffff !important;
     font-weight: bold;

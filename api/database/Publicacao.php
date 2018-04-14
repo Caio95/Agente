@@ -33,5 +33,11 @@ Class Publicacao {
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public static function all_user($id){
+        $pdo = Database::connection();
+        $sql = 'SELECT * from publicacao WHERE userId = ?';
+        $query = $pdo->query($sql);
+    }
+
     
 }
