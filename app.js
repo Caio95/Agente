@@ -14,7 +14,7 @@ angular.module('agente', ['ngRoute','ngStorage','moduloLogin','moduloHome'])
 	})
 	.when('/dados', {
 		templateUrl: 'views/inicio/dados.html',
-		controller: 'homeController'
+		controller: 'dadosController'
 	})
 	.when('/conta', {
 		templateUrl: 'views/inicio/conta.html',

@@ -132,21 +132,20 @@
 									<option value="">Informe a categoria</option>
 									<option value="Profissional">Profissional</option>
 									<option value="Amador">Amador</option>
-									<option value="Amador">Técnico</option>
-									<option value="Amador">Outros</option>
-									
+									<option value="Tecnico">Técnico</option>
+									<option value="Outros">Outros</option>
 								</select>
 							</div>
 							<div class="form-group">
 								<h3 for="DataNascimento">Data de Nascimento</h3>
-								<input type="date" name="nascimento" ng-model="nascimento" class="form-control input-lg" title="Data de Nascimento" required>
+								<input type="date" name="nascimento" ng-model="nascimento" class="form-control input-lg" title="Data de Nascimento" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
 							</div>
 							<div class="form-group">
 								<label class="radio-inline">
-									<input type="radio" ng-model="sexo" name="inlineRadioOptions"  value="M"> <p style="font-size:18px;">Masculino</p>
+									<input type="radio" ng-model="sexo" value="M"> <p style="font-size:18px;">Masculino</p>
 								</label>
 								<label class="radio-inline">
-									<input type="radio" ng-model="sexo" name="inlineRadioOptions"  value="F"> <p style="font-size:18px;">Feminino</p>
+									<input type="radio" ng-model="sexo" value="F"> <p style="font-size:18px;">Feminino</p>
 								</label>
 							</div>
 							<div class="form-group">
@@ -161,7 +160,7 @@
 							<div class="form-check">
 								<label class="form-check-label">
 									<input type="checkbox" class="form-check-input" ng-model="confirmacao" ng-true-value="'S'" ng-false-value="'N'">
-									Ao clicar em registrar, você concorda com nossa política e nossos termos
+									Ao clicar em registrar, você concorda com nossa <a data-toggle="modal" data-target="#termos">política e nossos termos</a>
 								</label>
 							  </div>
 							  <div class="alert alert-danger collapse" id="senha">
@@ -181,6 +180,154 @@
 							 </div>
 						</fieldset>
 					</form>
+				</div>
+				<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="termos">
+						<div class="modal-dialog modal-lg" role="document">
+						  <div class="modal-content">
+							<div class="modal-header">
+								<h3>Termo de Uso</h3>
+							</div>
+							<div class="modal-body">
+									Este Termo de Adesão e uso do AGENTE é baseado nos princípios e valores que regem nosso relacionamento com os usuários e outras pessoas que interagem com o Agente.
+									Este termo de Adesão e Uso integra o Termo e Condições de Uso do Portal www.agente.esp.br doravante denominado Agente, e torna-se válido a partir da aceitação do mesmo, isto é, no momento do seu cadastramento como usuário do Portal www.agente.esp.br você concorda e aceita as condições deste Termo de Adesão e Uso, conforme atualização periódica.<br>
+									
+									Privacidade<br>
+									Sua privacidade é muito importante para nós. Para isso, elencamos os itens abaixo para direcioná-lo e conscientiza-lo sobre a nossa política de utilização dos dados.<br>
+									
+									Suas informações<br>
+									Suas informações são as informações solicitadas quando você se inscreve no site, bem como as informações que você torna público através do seu perfil.<br>
+									
+									Informações de cadastro<br>
+									Ao se cadastrar no Agente, você é solicitado a fornecer informações como seu nome, endereço de e-mail, data de nascimento, gênero, cpf e email alternativo.<br>
+									
+									Informações do Perfil<br>
+									Suas informações também incluem as informações que você divulga na atualização do perfil, carrega uma foto, vídeo ou arquivo.<br>
+									
+									Informações Adicionais<br>
+									Incluem também as informações que você opta por inserir quando se comunica conosco, quando você entra em contato conosco usando um endereço de e-mail, por exemplo, quando visualiza o perfil/currículo de um atleta/profissional, quando interage por meio do Bate-papo ou outro ambiente interativo no site.
+									Seu nome, fotos inseridas no perfil, vídeos, gênero, redes, nome de usuário e número de identificação de usuário serão tornadas públicas para os usuários do AGENTE.
+									Sua data de nascimento nos permite fazer coisas como exibir conteúdos e anúncios apropriados à sua idade.<br>
+									• Recebemos dados sobre você sempre que você usa ou entra no AGENTE, como quando você olha a linha do tempo de outra pessoa, envia ou recebe mensagens, procura um amigo ou uma página, clica em, visualiza ou de alguma forma interage com as coisas e faz compras através do AGENTE.<br>
+									• Quando você publica ou faz o link algo como fotos ou vídeos no AGENTE, podemos receber dados (ou metadados) adicionais relacionados, como hora, data e local em que a foto ou o vídeo foram gravados.<br>
+									• Recebemos dados sempre que você visita um jogo, aplicativo ou site que utiliza através do AGENTE ou visita um site com um recurso do AGENTE (como um plug-in social), às vezes através de cookies. Isso pode incluir a data e a hora que você visita o site; o endereço da Web ou URL em que você está; informações técnicas sobre o endereço IP, navegador e o sistema operacional usados; e, se estiver conectado ao AGENTE, seu número de identificação de usuário.<br>
+									• Ocasionalmente, obtemos dados de nossos afiliados ou anunciantes parceiros, clientes e outras fontes que nos ajudam (ou os ajudam) a fornecer anúncios, entender a atividade on-line e tornar o AGENTE melhor de forma geral. Por exemplo, um anunciante pode nos contar informações sobre você (como você respondeu a um anúncio no AGENTE ou em outro site) para avaliar a efetividade e melhorar a qualidade dos anúncios.<br>
+									
+									Informações públicas<br>
+									• podem ser associadas a você (isto é, seu nome, fotos, vídeo, linha do tempo, número de identificação de usuário, nome de usuário etc.) mesmo fora do AGENTE;<br>
+									• podem aparecer quando alguém faz uma pesquisa no AGENTE ou em um mecanismo de pesquisa público;<br>
+									• estarão acessíveis a jogos, aplicativos, bate-papo e sites do AGENTE que você e seus amigos usam; e<br>
+									• ficarão acessíveis a qualquer pessoa que usar nossas APIs, como nossa API gráfica.<br>
+									Você deve considerar que suas informações listadas abaixo estarão sempre disponíveis publicamente:<br>
+									• Nome:
+									Isso ajuda atletas, familiares, amigos e profissionais do esporte encontrar você. Se não se sente à vontade para compartilhar seu nome verdadeiro, você pode sempre excluir sua conta.<br>
+									• Fotos e Vídeos:
+									Isso ajuda atletas, familiares, amigos e profissionais do esporte reconhecer você. Se você não se sentir à vontade para compartilhar suas fotos, vídeos, currículo e informações publicamente sempre poderão excluí-las. A menos que você as exclua, ao adicionar uma nova foto, currículo ou video, as informações anteriores permanecerão públicas no seu perfil ou nos arquivos de fotos, currículos e vídeos.<br>
+									• Redes:
+									Isso ajuda a ver com quem você compartilhará informações antes de selecionar "Amigos e redes" como um público-alvo personalizado. Se você não se sentir à vontade para compartilhar sua rede publicamente, poderá sair da rede.<br>
+									• Sexo:
+									Isso permite nos referir a você corretamente.<br>
+									• Nome e ID do usuário:
+									Permitem que você forneça um link personalizado para a sua linha do tempo ou página, receba um e-mail em seu endereço de e-mail do AGENTE e ajude a tornar possível a Plataforma do AGENTE.<br>
+									
+									Como usamos as informações que recebemos<br>
+									Usamos as informações que recebemos sobre você em relação aos serviços e recursos que fornecemos a você e a outros usuários, como visitantes, nossos parceiros, os anunciantes que compram anúncios no site e os desenvolvedores que criam os jogos, aplicativos e sites que você usa. Por exemplo, além de ajudar as pessoas a ver a encontrar as coisas que você faz e compartilha, podemos usar as informações que recebemos sobre você:<br>
+									• como parte de nossos esforços para manter os produtos, serviços e integrações do AGENTE seguros e protegidos;<br>
+									• para proteger os direitos ou propriedades do AGENTE e de outros;<br>
+									• para fornecer recursos e serviços de localização, como informar você e seus amigos quando algo está acontecendo nas redondezas;<br>
+									• para avaliar ou entender a eficiência dos anúncios que você e outras pessoas visualizam, incluindo fornecer anúncios relevantes para você;<br>
+									• para fazer sugestões para você e outros usuários do AGENTE, como: sugerir que seu amigo use nosso importador de contatos porque você encontrou amigos usando-o, sugerir que outro usuário o adicione como amigo porque o usuário importou o mesmo endereço de e-mail que você ou sugerir que seu amigo marque você em uma foto que ele carregou e que você esteja presente; e<br>
+									• para operações internas, que incluem correção de erros, análise de dados, testes, pesquisa, desenvolvimento e melhoria do serviço.<br>
+									Conceder-nos permissão para usar suas informações não só nos permite fornecer o AGENTE tal como é hoje, mas também nos permite fornecer recursos e serviços inovadores que desenvolvermos no futuro que usam, de novas maneiras, as informações que recebemos sobre você.
+									Embora você esteja nos permitindo usar as informações que recebemos sobre você, você sempre será o proprietário de todas as suas informações. Sua confiança é importante para nós, e é por isso que não compartilhamos informações sobre você com outros a menos que tenhamos:<br>
+									• recebido sua permissão;<br>
+									• notificado você, informando-o nesta política, por exemplo; ou<br>
+									• removido seu nome e outras informações de identificação pessoal do site.<br>
+									Obviamente, para informações a respeito de comentários sobre você, os usuários controlam como serão descritos.
+									Nós armazenamos dados pelo tempo necessário para fornecer produtos e serviços para você e outras pessoas, inclusive as descritas acima. Normalmente, as informações associadas à sua conta serão mantidas até sua conta ser excluída. Para certas categorias de dados, também podemos lhe contar sobre práticas de retenção de dados específicos.<br>
+									Podemos permitir acesso a informações públicas que foram inseridas e/ou compartilhadas por meio de nossos serviços.<br>
+									Podemos permitir que fornecedores de serviços acessem informações para que eles nos ajudem a oferecer alguns serviços.<br>
+									Podemos sugerir que seu amigo comente ou cite você em uma foto, vídeo ou arquivo respeitando sempre a ética e moral.<br>
+									
+									Compartilhando suas informações e conteúdos<br>
+									Você é proprietário e responsável de todas as informações e conteúdos que publica no AGENTE. Além disso:<br>
+									1. Para conteúdos protegidos por leis de direitos de propriedade intelectual, como fotos e vídeos (conteúdo IP), você nos concede especificamente a seguinte permissão: você nos concede uma licença global não exclusiva, transferível, sublicenciável, livre de royalties para usar qualquer conteúdo IP publicado por você ou associado ao AGENTE (Licença IP). Essa Licença IP termina quando você exclui seu conteúdo IP ou sua conta, exceto quando seu conteúdo é compartilhado com outras pessoas e este não é excluído por elas.<br>
+									2. Quando você exclui um conteúdo IP, ele é removido de maneira similar ao esvaziamento da lixeira do computador. No entanto, entenda que o conteúdo removido pode permanecer em cópias de backup por um período razoável (mas não estará disponível para outros).<br>
+									3. Quando você usa um aplicativo, o mesmo pode solicitar sua permissão para acessar seu conteúdo e suas informações, bem como o conteúdo e as informações que outras pessoas compartilharam com você. Exigimos que os aplicativos respeitem a sua privacidade e seu contrato com o aplicativo regerá a forma como o aplicativo poderá usar, armazenar e transferir seus conteúdos e informações.<br>
+									4. Quando você publica conteúdos ou informações, você está permitindo que todos, incluindo pessoas fora do AGENTE, acessem e usem essas informações e as associem a você (isto é, ao seu nome, foto, vídeo e currículo do perfil).<br>
+									5. Seus comentários ou outras sugestões sobre o AGENTE são sempre bem-vindos, mas entenda que podemos usá-los sem qualquer obrigação de compensar você por eles (assim como você não tem a obrigação de oferecê-los).<br>
+									Segurança<br>
+									Fazemos todo o possível para manter o AGENTE seguro, mas não podemos garantir isso. Precisamos da sua ajuda para manter o AGENTE seguro, o que inclui os seguintes compromissos de sua parte:<br>
+									1. Você não publicará comunicações comerciais não autorizadas (como spam) no AGENTE.<br>
+									2. Você não coletará conteúdos ou informações de usuários, ou acessará o AGENTE, usando meios automatizados (como bots de coleta, robôs, spiders ou scrapers) sem nossa permissão prévia.<br>
+									3. Você não fará parte de marketing multinível ilegal, como um esquema de pirâmide, no AGENTE.<br>
+									4. Você não carregará vírus ou outros códigos mal-intencionados.<br>
+									5. Você não solicitará informações de login, nem acessará uma conta que pertença a outra pessoa.<br>
+									6. Você não irá intimidar, assediar ou praticar bullying contra qualquer usuário.<br>
+									7. Você não publicará conteúdo que: contenha discurso de ódio, seja ameaçador ou pornográfico; incite violência; ou contenha nudez ou violência gratuita ou gráfica.<br>
+									8. Você não irá desenvolver nem operar um aplicativo de terceiros com conteúdos relacionados a álcool, encontros ou outro conteúdo adulto (incluindo anúncios) sem as restrições apropriadas com base em idade.<br>
+									9. Você seguirá as nossas Diretrizes de promoções e todas as leis aplicáveis caso promova ou ofereça concursos, brindes ou jogos de apostas (“promoção”) no AGENTE.<br>
+									10. Você não usará o AGENTE para praticar qualquer ato ilegal, equivocado, malicioso ou discriminatório.<br>
+									11. Você não fará nada que possa desabilitar, sobrecarregar ou impedir o funcionamento ou a aparência adequados do AGENTE, como um ataque de negação de serviço ou interferência no processamento da página ou de outra funcionalidade do AGENTE.<br>
+									12. Você não facilitará nem incentivará a violação desta Declaração ou de nossas políticas.<br>
+									
+									Registro e segurança da conta<br>
+									Os usuários do AGENTE fornecem seus nomes e informações reais, e precisamos da sua ajuda para que isso continue assim. Veja a seguir alguns compromissos que você firma conosco em relação ao registro e à manutenção da segurança de sua conta.<br>
+									1. Você não fornecerá qualquer informação pessoal falsa no AGENTE, nem criará uma conta para qualquer outra pessoa além de você sem permissão.<br>
+									2. Você não criará mais de uma conta pessoal.<br>
+									3. Se desativarmos sua conta, você não deverá criar outra sem nossa permissão.<br>
+									4. Você não usará sua linha do tempo pessoal para seu próprio ganho comercial. Para tais fins, use as Páginas do AGENTE.<br>
+									5. Você não usará o AGENTE se for menor de 13 anos.<br>
+									6. Você não usará o AGENTE se for um criminoso sexual condenado.<br>
+									7. Você manterá suas informações de contato precisas e atualizadas.<br>
+									8. Você não compartilhará sua senha (ou, no caso de desenvolvedores, sua chave secreta), deixará outra pessoa acessar sua conta ou praticará qualquer ato que possa comprometer a segurança da sua conta.<br>
+									9. Você não transferirá sua conta (incluindo qualquer Página ou aplicativo administrado por você) para ninguém sem primeiro obter nossa permissão por escrito.<br>
+									10. Se você selecionar um nome de usuário ou identificador similar para sua conta ou Página, nós nos reservaremos o direito de remover ou recuperar este nome ou identificador se considerarmos adequado (por exemplo, quando um proprietário de uma marca comercial reivindicar um nome de usuário que não tem qualquer relação com o nome real do usuário).<br>
+									
+									Proteção dos direitos de outras pessoas<br>
+									Nós respeitamos os direitos de terceiros, e esperamos que você faça o mesmo.<br>
+									1. Você não publicará conteúdo ou praticará qualquer ato no AGENTE que infrinja ou viole os direitos de terceiros ou a lei.<br>
+									2. Nós podemos remover qualquer conteúdo ou informação publicada por você no AGENTE se julgarmos que isso viola esta declaração ou nossas políticas.<br>
+									3. Nós fornecemos a você ferramentas para ajudá-lo a proteger seus direitos de propriedade intelectual. Para saber mais, acesse a nossa página Como denunciar reclamações de infrações de propriedade intelectual.<br>
+									4. Se removermos seu conteúdo por infringir os direitos autorais de alguém, e você acreditar que o removemos por engano, forneceremos a você a oportunidade de recorrer.<br>
+									5. Se você violar repetidamente os direitos de propriedade intelectual de terceiros, nós desativaremos sua conta quando apropriado.<br>
+									6. Você não deve usar nossos direitos autorais ou marcas comerciais (incluindo AGENTE, os logotipos AGENTE ), ou qualquer marca semelhante que possa causar confusão, exceto quando expressamente autorizado por nossas Diretrizes de Uso de Marcas ou com nossa permissão prévia por escrito.<br>
+									7. Se for coletar informações de usuários, você deverá: obter seu consentimento, deixar claro que é você (e não o AGENTE) quem está coletando as informações e publicar uma política de privacidade explicando quais informações serão coletadas e como elas serão usadas.<br>
+									8. Você não deve publicar documentos de identificação ou informações financeiras confidenciais de terceiros no AGENTE.<br>
+									9. Você não marcará usuários nem enviará convites por e-mail para não usuários sem o consentimento deles. O AGENTE oferece ferramentas de denúncia social para permitir que os usuários façam comentários sobre a marcação.<br>
+									Celular e outros dispositivos móveis<br>
+									1. Atualmente, fornecemos nossos serviços móveis gratuitamente, mas lembre-se de que as taxas e os impostos normais de sua operadora, como taxas de mensagens de texto, ainda se aplicam.<br>
+									2. Caso altere ou desative seu número de telefone celular, você deverá atualizar as informações de sua conta no AGENTE dentro de 48 horas para garantir que suas mensagens não sejam enviadas para a pessoa que adquirir seu número antigo.<br>
+									3. Você consente e fornece todos os direitos necessários para permitir que os usuários sincronizem seus dispositivos com quaisquer informações (inclusive através de um aplicativo) visíveis para eles AGENTE.<br>
+									
+									
+									Sobre propagandas e outros conteúdos comerciais fornecidos ou aprimorados pelo AGENTE<br>
+									Temos como objetivo divulgar anúncios e outros conteúdos comerciais ou patrocinados que sejam importantes para nossos usuários e anunciantes. Para nos ajudar nesse aspecto, você concorda com os termos a seguir.<br>
+									1. Você nos concede permissão para usar seu nome, imagem (fotos e vídeos), conteúdos (currículo e informações) relacionadas a conteúdos comerciais, patrocinados ou relacionados fornecido ou aperfeiçoado por nós. Isto significa, por exemplo, que você permite que uma empresa ou outra entidade nos pague para exibir seu nome e/ou imagem do perfil com seus conteúdos ou informações sem receber qualquer compensação por isso.<br>
+									2. Não forneceremos seus conteúdos ou informações a anunciantes sem seu consentimento.<br>
+									3. Você entende que serviços pagos e comunicações relacionadas nem sempre serão identificados por nós.<br>
+									Disposições especiais aplicáveis aos anunciantes<br>
+									Você pode alcançar seu público desejado adquirindo anúncios no AGENTE ou nossa rede de publicidade. Os seguintes termos adicionais se aplicarão a você caso faça um pedido através de nosso portal de propaganda on-line (Pedido).<br>
+									1. Ao fazer um pedido, você deve nos informar o tipo de propaganda que deseja comprar, o valor que pretende gastar e seu lance. Se aceitarmos seu pedido, forneceremos seus anúncios conforme a disponibilidade do inventário. Ao fornecer seu anúncio, faremos o possível para veiculá-lo para o público-alvo especificado por você, embora não possamos garantir em todas as circunstâncias que o seu anúncio alcançará seu público-alvo.<br>
+									2. Nos casos em que acreditarmos que isso aumentará a eficácia da sua campanha de publicidade, poderemos ampliar os critérios de direcionamento que você especificar.<br>
+									3. Você pagará por seus pedidos de acordo com nossos Termos de pagamento. O valor que você pagará será calculado com base em nossos mecanismos de monitoramento.<br>
+									4. Seus anúncios cumprirão com nossas diretrizes de propaganda.<br>
+									5. Nós determinaremos o tamanho, a localização e o posicionamento de seus anúncios.<br>
+									6. Nós não garantimos a atividade que seus anúncios receberão, como o número de cliques que seus anúncios obterão.<br>
+									7. Não podemos controlar como os cliques são gerados em seus anúncios. Possuímos sistemas que tentam detectar e filtrar certas atividades de cliques, mas não nos responsabilizamos por fraude de cliques, problemas tecnológicos ou outras atividades de cliques potencialmente inválidas que possam afetar o custo da veiculação dos anúncios.<br>
+									8. Você pode cancelar seu pedido a qualquer momento através do nosso portal on-line, mas pode levar até 24 horas para que a veiculação do anúncio seja interrompida.Você é responsável pelo pagamento de todos os anúncios veiculados.<br>
+									9. Nossa licença para executar seu anúncio terminará assim que concluirmos seu pedido. Você entende, no entanto, que se os usuários tiverem interagido com seu anúncio, o mesmo poderá permanecer até que os usuários o excluam.<br>
+									10. Podemos usar seus anúncios, e seus conteúdos e informações relacionadas, para fins comerciais ou promocionais.<br>
+									11. Você não publicará comunicados à imprensa ou fará declarações públicas sobre seu relacionamento com o agente sem a nossa permissão prévia por escrito.<br>
+									12. Podemos rejeitar ou remover qualquer anúncio por qualquer motivo.<br>
+									13. Se você for publicar anúncios em nome de outra pessoa, deverá ter permissão para tal, incluindo:<br>
+									1. sua garantia de que possui autoridade legal para associar o anunciante a esta Declaração.<br>
+									2. seu consentimento de que, caso o anunciante que você representa viole esta Declaração, podemos responsabilizar você por essa violação.<br>
+							</div>
+							<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				
 				<div class="col-md-2">

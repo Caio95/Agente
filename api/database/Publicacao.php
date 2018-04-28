@@ -2,7 +2,7 @@
 require_once('Database.php');
 
 Class Publicacao {
-    public static function add($descricao, $imagem, $video,  $userId){
+    public static function add($descricao, $imagem, $video, $userId){
         $pdo = Database::connection();
         $sql = 'INSERT INTO publicacao(descricao, imagem, video, userId) VALUES (?, ?, ?, ?)';
         $r = false;

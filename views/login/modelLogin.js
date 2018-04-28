@@ -47,21 +47,17 @@ angular.module('moduloLogin',[])
             
                 if(validEmail($scope.email)){
                     if(validar($scope.senha, $scope.senha2)){
-                        var idade = data.getFullYear() - $scope.nascimento.getFullYear();
-                        var nascimento = $scope.nascimento.getUTCFullYear() + '-' +('00' + ($scope.nascimento.getUTCMonth()+1)).slice(-2) + '-' 
-                        +('00' + $scope.nascimento.getUTCDate()).slice(-2);
+
                         if($scope.confirmacao == "S"){
                             $http.post('http://localhost/agente/api/usuario/save.php',{
                                 'nome' : $scope.nome,
-                                'idade' : idade,
                                 'sexo' : $scope.sexo,
-                                'nascimento' : nascimento,
+                                'nascimento' : $scope.nascimento,
                                 'tipo' : $scope.tipo,
                                 'esporte' : $scope.esporte,
-                                'cidade' : '',
-                                'estado' : '',
                                 'login' : $scope.email,
-                                'senha' : $scope.senha
+                                'senha' : $scope.senha,
+                                'ativo' : 0
                             }).then(function(result){
                                 $scope.nome = null;
                                 $scope.sexo = null;

@@ -2,13 +2,13 @@
 require_once('Database.php');
 
 Class Usuario {
-    public static function add($nome, $idade, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $login, $senha){
+    public static function add($nome, $sexo, $nascimento, $tipo, $esporte, $login, $senha, $ativo){
         $pdo = Database::connection();
-        $sql = 'INSERT INTO usuario(nome, idade, sexo, nascimento, tipo, esporte, cidade, estado, login, senha) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO usuario(nome, sexo, nascimento, tipo, esporte, login, senha, ativo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
         $r = false;
         try{
             $query = $pdo->prepare($sql);
-            $r = $query->execute(array($nome, $idade, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $login, $senha));
+            $r = $query->execute(array($nome, $sexo, $nascimento, $tipo, $esporte, $login, $senha, $ativo));
             if($query->rowCount() > 0){
                 return $pdo->lastInsertId();
             }
@@ -38,8 +38,8 @@ Class Usuario {
         $sql = 'SELECT * FROM usuario WHERE idUser = ?';
         $query = $pdo->prepare($sql);
         $query->execute(array($id));
-        $loja = $query->fetch(PDO::FETCH_ASSOC);
-        return $loja;
+        $user = $query->fetch(PDO::FETCH_ASSOC);
+        return $user;
     }
 
     public static function validate($usuario, $senha){
@@ -47,6 +47,15 @@ Class Usuario {
         $sql = 'SELECT * FROM usuario WHERE login = ? AND senha = ?';
         $query = $pdo->prepare($sql);
         $query->execute(array($usuario, $senha));
+        $usuario = $query->fetch(PDO::FETCH_ASSOC);
+        return $usuario;
+    }
+
+    public static function update($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $fotoPerfil, $senha, $ativo, $idUser){
+        $pdo = Database::connection();
+        $sql = 'UPDATE usuario SET nome=?, sexo=?, nascimento=?, tipo=?, esporte=?, cidade=?, estado=?, historia=?, evento=?, premio=?, fotoPerfil=?, senha=?, ativo=? WHERE idUser=?';
+        $query = $pdo->prepare($sql);
+        $query->execute(array($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $fotoPerfil, $senha, $ativo, $idUser));
         $usuario = $query->fetch(PDO::FETCH_ASSOC);
         return $usuario;
     }
