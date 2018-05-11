@@ -19,12 +19,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $historia = $request->historia;
     $evento = $request->evento;
     $premio = $request->premio;
-    $fotoPerfil = $request->fotoPerfil;
     $senha = $request->senha;
     $ativo = $request->ativo;
     $idUser = $request->idUser;
 
-    $usuario = Usuario::update($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $fotoPerfil, $senha, $ativo, $idUser);
+    $usuario = Usuario::update($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $senha, $ativo, $idUser);
 
     if($usuario) {
         echo json_encode($usuario);

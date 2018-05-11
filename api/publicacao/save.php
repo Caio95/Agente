@@ -13,8 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $imagem = $request->imagem;
     $video = $request->video;
     $userId = $request->userId;
+    $data = $request->data;
 
-    $publicacao = Publicacao::add($descricao, $imagem, $video, $userId);
+    $publicacao = Publicacao::add($descricao, $imagem, $video, $userId, $data);
 
     if($publicacao){
         echo json_encode($publicacao);

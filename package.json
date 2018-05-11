@@ -20,8 +20,12 @@
     "angular-messages": "^1.5.5",
     "angular-resource": "^1.5.5",
     "angular-route": "^1.5.5",
+    "angular-timeline": "^1.7.0",
+    "angular-ui-notification": "^0.3.6",
+    "base64-img": "^1.0.4",
     "bootstrap": "^3.3.7",
     "br-cidades-estados": "^1.1.0",
+    "flow": "^0.2.3",
     "jquery": "^2.2.0",
     "ngstorage": "^0.3.10"
   },

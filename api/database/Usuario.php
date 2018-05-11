@@ -51,11 +51,20 @@ Class Usuario {
         return $usuario;
     }
 
-    public static function update($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $fotoPerfil, $senha, $ativo, $idUser){
+    public static function update($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $senha, $ativo, $idUser){
         $pdo = Database::connection();
-        $sql = 'UPDATE usuario SET nome=?, sexo=?, nascimento=?, tipo=?, esporte=?, cidade=?, estado=?, historia=?, evento=?, premio=?, fotoPerfil=?, senha=?, ativo=? WHERE idUser=?';
+        $sql = 'UPDATE usuario SET nome=?, sexo=?, nascimento=?, tipo=?, esporte=?, cidade=?, estado=?, historia=?, evento=?, premio=?, senha=?, ativo=? WHERE idUser=?';
         $query = $pdo->prepare($sql);
-        $query->execute(array($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $fotoPerfil, $senha, $ativo, $idUser));
+        $query->execute(array($nome, $sexo, $nascimento, $tipo, $esporte, $cidade, $estado, $historia, $evento, $premio, $senha, $ativo, $idUser));
+        $usuario = $query->fetch(PDO::FETCH_ASSOC);
+        return $usuario;
+    }
+
+    public static function update_foto($idUser, $fotoPerfil){
+        $pdo = Database::connection();
+        $sql = 'UPDATE usuario SET fotoPerfil=? WHERE idUser=?';
+        $query = $pdo->prepare($sql);
+        $query->execute(array($fotoPerfil,$idUser));
         $usuario = $query->fetch(PDO::FETCH_ASSOC);
         return $usuario;
     }

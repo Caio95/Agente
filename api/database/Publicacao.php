@@ -2,13 +2,13 @@
 require_once('Database.php');
 
 Class Publicacao {
-    public static function add($descricao, $imagem, $video, $userId){
+    public static function add($descricao, $imagem, $video, $userId, $data){
         $pdo = Database::connection();
-        $sql = 'INSERT INTO publicacao(descricao, imagem, video, userId) VALUES (?, ?, ?, ?)';
+        $sql = 'INSERT INTO publicacao(descricao, imagem, video, userId, data) VALUES (?, ?, ?, ?, ?)';
         $r = false;
         try{
             $query = $pdo->prepare($sql);
-            $r = $query->execute(array($descricao, $imagem, $video, $userId));
+            $r = $query->execute(array($descricao, $imagem, $video, $userId, $data));
             if($query->rowCount() > 0){
                 return $pdo->lastInsertId();
             }

@@ -1,100 +1,49 @@
+	<br><br><br><br>
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+				<div class="panel panel-success">
+						<div class="panel-body">
+								<div class="input-group">
+										<span class="input-group-btn" flow-init flow-name="uploader.flow" flow-files-added="processFiles($files)">
+												<button flow-btn type="file" class="btn btn-default" ng-accept=".jpg"><i class="glyphicon glyphicon-camera"></i></button>
+										</span>
+										<input type="text" class="form-control" placeholder="Publique seu evento..." ng-model="descricao">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button" id="btnPublicar" ng-click="publicar()"><i class="glyphicon glyphicon-ok"></i> Publicar</button>
+										</span>
+								</div>
+						</div>
+				</div>
+		</div>
 
-	<!-- <div class="col-md-7" id="publicacao">
-			<div class="panel panel-default">
-					<div class="panel-body">
-							<div class="input-group">
-									<span class="input-group-btn">
-											<button class="btn btn-default" type="file"><i class="glyphicon glyphicon-camera"></i></button>
-									</span>
-									<input type="text" class="form-control" placeholder="Publique seu talento...">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button" id="btnPublicar"><i class="glyphicon glyphicon-ok"></i> Publicar</button>
-									</span>
+	<div  id="publicacoes" onload="publica()">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-7 ">
+					<h2 class="text-center" style="color:#009900;"><i class="glyphicon glyphicon-globe"></i> Publicações</h2>
+						<div class="panel panel-success" ng-repeat="publicacao in publicacoes">
+								<div class="panel-heading">
+									<img ng-src="{{publicacao.foto}}" class="img-responsive" style="width:33px; height:37px; border-radius:5px;" align="left"/>
+									<div>
+										<h3 class="panel-title">&nbsp;{{publicacao.nome}}</h3>
+										<i style="font-size:10px;">&nbsp;&nbsp;{{publicacao.data}}</i>
+									</div>
+									
+								</div>
+							<div class="panel-body" align="center">
+									<img ng-src="{{publicacao.fotoPublic}}" class="img-responsive" style="width:430px; height:400px;"/>
+							  	<p style="font-weight: bold; font-family: sans-serif;">{{publicacao.descricao}}</p>
 							</div>
-					</div>
-			</div>
-		</div> -->
-	<br><br>
-	<div  id="publicacoes">
-			<div class="container">
-					<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						<h2 class="text-center" style="color:#009900;"><i class="glyphicon glyphicon-globe"></i> Publicações</h2>
-						<ul class="timeline">
-						<li>
-							<div class="timeline-badge primary"><a><i class="glyphicon glyphicon-time invert" title="Now"></i></a></div>
-							<div class="timeline-panel">
-								<form role="form" class="facebook-share-box">
-									<div class="timeline-body">
-										<div class="share-form">
-											<ul class="post-types">
-												<!-- <li class="post-type">
-													<a class="status" id="shareType" href="#"><i class="glyphicon glyphicon-star-empty"></i> Status</a>
-												</li> -->
-												<li class="post-type">
-													<a class="photos" id="shareType" href="#"><i class="glyphicon glyphicon-picture"></i> Foto</a>
-												</li>
-												<li class="post-type">
-													<a class="videos" id="shareType" href="#"><i class="glyphicon glyphicon-film"></i> Vídeo</a>
-												</li>
-											</ul>
-											<div class="share">
-												
-												<div><textarea cols="40" rows="10" id="status_message" class="form-control message" style="height: 80px; resize: none; overflow: hidden;" ng-model="descricao" placeholder="Publique aqui..."></textarea> </div>
-												<div class="image hide">
-													<input type="file" class="form-control" id="image" ng-model="imagem">
-												</div>
-												<div class="video hide">
-													<input type="text" class="form-control" placeholder="Youtube or Vimeo video URL" id="videoUrl" ng-model="video">
-												</div>
-											</div>
-											</div>
+							<div class="panel-footer">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Comentar publicação...">
+											<span class="input-group-btn">
+											  <button class="btn btn-warning" type="button">Comentar</button>
+										</span>
 									</div>
-									<div class="timeline-footer clearfix">
-										<div class="pull-right">
-											<input type="submit" name="submit" value="Publicar" id="btn-share" class="btn btn-default" ng-click="publicar()" style="background-color:#009900; color:#FFFFFF;">
-										</div>
-									</div>
-								</form>
 							</div>
-						</li>
-						<li class="timeline-inverted" ng-repeat="publicacao in publicacoes">
-							<div class="timeline-badge primary" ><a title="11 hours ago via Twitter"><i class="glyphicon glyphicon-time invert" id=""></i></a></div>  <!-- data de publicacao-->
-							<div class="timeline-panel">
-								<div class="timeline-header">
-										<div class="row">
-												<div class="col-xs-2">
-													<img class="img-responsive img-rounded" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G"> <!--Foto de perfil do usuario--> 
-												</div>
-												<div class="col-xs-8">
-													<a>{{publicacao.nome}}</a>
-												</div>
-										</div>
-								</div>
-								<div class="timeline-heading">
-									<div class="videowrapper">
-											<iframe></iframe>  <!-- video aqui -->
-									</div>
-								</div>
-								<div class="timeline-body">
-									<p>{{publicacao.descricao}}</p>
-										<!-- descricao da publicacao aqui -->
-								</div>
-								<div class="timeline-footer">
-									<div class="media">
-										<a class="pull-left" href="#">
-											<img class="media-object" src="http://0.gravatar.com/avatar/43a5669f2e4d2342701ed560d453a0dd?s=50&d=&r=G" /> <!-- imagem do amigo -->
-										</a>
-										<div class="media-body">
-											<p>Looking cool</p>			<!--comentarios aqui -->
-											<a href="#">January 19 at 8:15pm</a>   <!--data de publicacao do comentario -->
-										</div>
-									</div>
-									<hr>
-								</div>
-							</div>
-						</li>
-						</ul>
+						</div>
 					</div>
 				</div>
 		</div>
