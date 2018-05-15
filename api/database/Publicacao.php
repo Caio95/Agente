@@ -28,7 +28,7 @@ Class Publicacao {
 
     public static function all(){
         $pdo = Database::connection();
-        $sql = 'SELECT * FROM publicacao';
+        $sql = 'SELECT * FROM publicacao ORDER BY idPublic DESC';
         $query = $pdo->query($sql);
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }

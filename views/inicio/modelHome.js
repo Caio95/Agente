@@ -1,12 +1,11 @@
 'use strict';
 
 angular.module('moduloHome',['br.cidades.estados','flow', 'ui-notification','angular-timeline'])
-.controller('homeController', function($rootScope, $scope, $http, $location, $localStorage, Notification, $window){
+.controller('homeController', function($rootScope, $scope, $http, $location, $localStorage, Notification){
     $rootScope.pageTitle= 'Agente | Início';
-    // $location.path('/inicio');  
-
+    
     if($localStorage.usuario){
-        $rootScope.usuario = $localStorage.usuario;  
+            $rootScope.usuario = $localStorage.usuario;  
             $scope.publicacoes=[];
             $http.get('http://localhost/agente/api/publicacao/list.php')
             .then(function(result){
@@ -33,7 +32,7 @@ angular.module('moduloHome',['br.cidades.estados','flow', 'ui-notification','ang
 
             $scope.imagePublic;
             $scope.processFiles = function(files){
-                angular.forEach(files, function(flowFile, i){
+                angular.forEach(files, function(flowFile){
                 var fileReader = new FileReader();
                     fileReader.onload = function (event) {
                         var uri = event.target.result;
@@ -86,7 +85,10 @@ angular.module('moduloHome',['br.cidades.estados','flow', 'ui-notification','ang
             } else{
                 $location.path('/');
             }
-
+            
+            function recarregar(){
+                $location.path('/');
+            }
             
     })
 
